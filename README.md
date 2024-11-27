@@ -36,7 +36,6 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
    `config.json` dosyasındaki gerekli yapılandırmaları yapın:
    ```json
 
-   {
   "token": "BOT_TOKEN",
   "guildId": "SUNUCU_ID",
   "yetkilirolid": "YETKILI_ROL_ID",
@@ -46,8 +45,7 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
     "password": "PASSWOARD_YOKSA_BOS_BIRAKIN",
     "database": "DATABASE_ISMI"
   }
-   }
-   
+
    ```
 
 4. **Botu Başlatın**
