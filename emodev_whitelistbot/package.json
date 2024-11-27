@@ -1,0 +1,28 @@
+{
+  "author": "emirhannxxd",
+  "name": "emodev_whitelistbot",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Emodev Whitelist BOT 1.0.0 - FiveM whitelist yönetimi için Discord botu.",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "mysql2": "^3.11.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "FiveM",
+    "whitelist",
+    "steam hex",
+    "discord.js",
+    "mysql"
+  ],
+  "bugs": {
+    "url": "https://github.com/emirhannxxd/emodev_whitelist/issues"
+  },
+  "homepage": "https://github.com/emirhannxxd/emodev_whitelist"
+}
