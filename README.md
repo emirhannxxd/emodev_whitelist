@@ -33,7 +33,8 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
    ```
 
 3. **config.json Düzenlemesi**
-   `config.json` dosyasındaki gerekli yapılandırmaları yapın.
+   ```bash
+   config.json dosyasındaki gerekli yapılandırmaları yapın.
    ```
 
 4. **Botu Başlatın**
