@@ -44,8 +44,8 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
    ```
 
 5. **FiveM Sunucusuna Scripti Ekleyin**
-   - Bu scripti FiveM sunucunuza entegre edin ve `resources` klasörüne koyun.
-   - Sunucuya ait `config.lua` dosyasını aşağıdaki gibi düzenleyin:
+   Bu scripti FiveM sunucunuza entegre edin ve `resources` klasörüne koyun.
+   Sunucuya ait `config.lua` dosyasını aşağıdaki gibi düzenleyin:
      ```lua
      Settings = {
        botToken = "Discord Bot Token", 
