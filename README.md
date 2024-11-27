@@ -34,19 +34,7 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
 
 3. **config.json Düzenlemesi**
    `config.json` dosyasındaki gerekli yapılandırmaları yapın:
-   ```
-   {
-  "token": "BOT_TOKEN",
-  "guildId": "SUNUCU_ID",
-  "yetkilirolid": "YETKILI_ROL_ID",
-  "mysql": {
-    "host": "localhost",
-    "user": "root",
-    "password": "PASSWOARD_YOKSA_BOS_BIRAKIN",
-    "database": "DATABASE_ISMI"
-  }
-   }
-   ```
+
 
 4. **Botu Başlatın**
    Botu başlatmak için:
