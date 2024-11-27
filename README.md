@@ -35,6 +35,7 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
 3. **config.json Düzenlemesi**
    `config.json` dosyasındaki gerekli yapılandırmaları yapın:
    ```json
+
    {
   "token": "BOT_TOKEN",
   "guildId": "SUNUCU_ID",
@@ -46,6 +47,7 @@ Bu script ve botu kullanmak için aşağıdaki adımları takip edebilirsiniz.
     "database": "DATABASE_ISMI"
   }
    }
+   
    ```
 
 4. **Botu Başlatın**
