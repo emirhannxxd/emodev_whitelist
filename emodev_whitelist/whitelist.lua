@@ -57,10 +57,8 @@ function steamhexcheckle(steamHex, callback)
     end)
 end
 
-function webhookgonder(steamHex, discordId)
+function webhookgonder(steamHex, discordId, ipadresi)
     local webhookUrl = Settings["webhookUrl"]
-    local saat = os.date("!%Y-%m-%d %H:%M:%S")
-    local ipadresi = GetPlayerIP(source)
 
     local webhookisim = "Emodev Whitelist Log"
     local webhookavatar = "https://i.ibb.co/kqYQ1kt/emodev.png"
@@ -76,13 +74,11 @@ function webhookgonder(steamHex, discordId)
                 fields = {
                     { name = "Steam Hex", value = steamHex or "Bilinmiyor", inline = true },
                     { name = "Discord ID", value = discordId and ("<@" .. discordId .. ">") or "Bulunamadı", inline = true },
-                    { name = "Zaman", value = saat, inline = true },
                     { name = "IP Adresi", value = "||" .. (ipadresi or "Bulunamadı") .. "||", inline = true }
                 },
                 footer = {
                     text = "emodev_whitelist",
                 },
-                timestamp = saat,
             }
         }
     }
@@ -98,6 +94,7 @@ AddEventHandler('playerConnecting', function(name, setCallback, deferrals)
     local identifiers = GetPlayerIdentifiers(player)
     local discordId = nil
     local steamHex = nil
+    local ipadresi = GetPlayerEndpoint(player)
 
     for _, id in ipairs(identifiers) do
         if string.sub(id, 1, 8) == "discord:" then
@@ -118,12 +115,12 @@ AddEventHandler('playerConnecting', function(name, setCallback, deferrals)
         discordrolcheckle(discordId, function(hasRole)
             if hasRole then
                 deferrals.done()
-                webhookgonder(steamHex, discordId)
+                webhookgonder(steamHex, discordId, ipadresi)
             else
                 steamhexcheckle(steamHex, function(isWhitelisted, fetchedDiscordId)
                     if isWhitelisted then
                         deferrals.done()
-                        webhookgonder(steamHex, fetchedDiscordId)
+                        webhookgonder(steamHex, fetchedDiscordId, ipadresi)
                     else
                         deferrals.done("[EMODEV-WHITELIST] Discord Whitelist Rolün Yok Veya Steam Hex Kayıtlı Değil.")
                     end
@@ -134,7 +131,7 @@ AddEventHandler('playerConnecting', function(name, setCallback, deferrals)
         steamhexcheckle(steamHex, function(isWhitelisted)
             if isWhitelisted then
                 deferrals.done()
-                webhookgonder(steamHex, discordId)
+                webhookgonder(steamHex, discordId, ipadresi)
             else
                 deferrals.done("[EMODEV-WHITELIST] Discord ID bulunamadı ve Steam Hex kayıtlı değil.")
             end
